@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Genle is a motion and graphic designer based in Guangzhou, China." />
+  <title>Genle — Motion & Graphic Design</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand-wordmark" href="#top">Genle</a>
+      <a class="mark" href="#top" aria-label="Genle home"><span>G</span></a>
+      <div class="desktop-nav"><a href="#work">Work</a><a href="#post">Post</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu" hidden><a href="#work">Work</a><a href="#post">Post</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+  </header>
+  <main id="top">
+    <section class="home-hero" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="./assets/home/home%20video.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero-content"><h1 id="hero-title">This is Genle Zhu</h1><p>Motion and graphic design.<br />Guangzhou, China.</p></div>
+    </section>
+    <section class="home-section home-work" id="work" aria-labelledby="work-title">
+      <div class="section-intro"><p class="section-label">Work</p><h2 id="work-title">Collection of Genle</h2></div>
+      <div class="home-work-list" id="home-work-list" aria-label="Selected work images"></div>
+    </section>
+    <section class="home-section home-news" id="post" aria-labelledby="post-title">
+      <div class="section-intro"><p class="section-label">Post</p><h2 id="post-title">Check my recent post</h2></div>
+      <div class="news-grid" aria-label="Post section, content to be added">
+        <article class="news-card news-card-large"><div class="news-image"><span>Post</span></div><p class="news-type">Journal</p><h3>More to come</h3></article>
+        <article class="news-card"><div class="news-image"><span>Post</span></div><p class="news-type">Process</p><h3>More to come</h3></article>
+        <article class="news-card"><div class="news-image"><span>Post</span></div><p class="news-type">Notes</p><h3>More to come</h3></article>
+        <article class="news-card"><div class="news-image"><span>Post</span></div><p class="news-type">Ideas</p><h3>More to come</h3></article>
+        <article class="news-card"><div class="news-image"><span>Post</span></div><p class="news-type">Studio</p><h3>More to come</h3></article>
+        <article class="news-card"><div class="news-image"><span>Post</span></div><p class="news-type">Archive</p><h3>More to come</h3></article>
+      </div>
+    </section>
+    <section class="home-section home-about" id="about" aria-labelledby="about-title">
+      <div class="section-intro"><p class="section-label">About</p><h2 id="about-title">Genle Zhu</h2></div>
+      <p class="about-statement">Motion, graphics, and everything in between.</p>
+      <a class="section-more" href="#contact"><span>Get in touch</span><svg viewBox="0 0 10 13" aria-hidden="true"><path d="M10 6.5 0 12.5V.5l10 6Z" fill="currentColor" /></svg></a>
+    </section>
+    <footer class="site-footer" id="contact">
+      <div class="footer-cta"><h2>Let's make something move.</h2><a href="mailto:zhu@genle.cc">zhu@genle.cc</a></div>
+      <div class="footer-columns"><div><span class="footer-label">Guangzhou, China</span><p>2/F–4/F No.126, Jiao Xi Road<br />Nan Sha District</p></div><div><span class="footer-label">Contact</span><p><a href="mailto:zhu@genle.cc">zhu@genle.cc</a></p></div></div>
+      <div class="footer-bottom"><span>Motion & Graphic Design</span><a href="#work">Work</a><a href="#post">Post</a><span>©2026 Genle</span></div>
+    </footer>
+  </main>
+  <script src="./asset-manifest.js"></script>
+  <script src="./app.js" defer></script>
+</body>
+</html>
