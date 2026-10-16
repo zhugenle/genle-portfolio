@@ -53,6 +53,28 @@ if (workList && manifest.homeRows.length) {
   window.addEventListener('resize', renderStrips, { passive: true });
 }
 
+const postList = document.querySelector('#home-post-list');
+if (postList && manifest.post?.length) {
+  postList.innerHTML = manifest.post.slice(0, 2).map((post, index) => `
+    <article class="news-card${index === 0 ? ' news-card-large' : ''}">
+      <div class="news-image"><img src="${escapeHtml(post.src)}" width="${post.width}" height="${post.height}" alt="${escapeHtml(post.alt || post.title)}" loading="lazy" /></div>
+      <h3>${escapeHtml(post.title)}</h3>
+    </article>`).join('');
+}
+
+const clientList = document.querySelector('#home-client-list');
+if (clientList) {
+  clientList.innerHTML = (manifest.clients || []).map(client => `
+    <li class="client-logo" style="--logo-width:${client.visualWidth || 160}px">${client.markup || ''}</li>`).join('');
+  clientList.querySelectorAll('svg').forEach(svg => {
+    const bounds = svg.getBBox();
+    if (bounds.width > 0 && bounds.height > 0) {
+      const padding = Math.max(bounds.width, bounds.height) * .01;
+      svg.setAttribute('viewBox', `${bounds.x - padding} ${bounds.y - padding} ${bounds.width + padding * 2} ${bounds.height + padding * 2}`);
+    }
+  });
+}
+
 const menuToggle = document.querySelector('.mobile-menu-toggle');
 const mobileMenu = document.querySelector('#mobile-menu');
 menuToggle?.addEventListener('click', () => {
